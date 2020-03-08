@@ -18,6 +18,8 @@
     </div>
 
     </g-link>
+
+
   </Layout>
 </template>
 
@@ -49,3 +51,5 @@ query Blog {
   margin: auto;
 }
 </style>
+
+
