@@ -17,26 +17,32 @@
   }
 </page-query>
 
+
 <script>
+import '@shopify/buy-button-js'
 export default {
 
+  mounted () {
+    this.$nextTick(function () {
+
+      const pathname = window.location.pathname;
+      console.log(pathname)
+      const producthandle = pathname.replace("/product/", "")
+
+    
+
+      const client = ShopifyBuy.buildClient({
+        domain: "geohmetry.myshopify.com",
+        storefrontAccessToken: "d3fc2080bc04457f190bca2613352886",
+      })
+      const ui = ShopifyBuy.UI.init(client)
+      ui.createComponent('product', {
+        handle: producthandle,
+        node: document.getElementById('my-product')      
+      });
+      
+    })
+  }
+
 }
-
-const pathname = window.location.pathname;
-console.log(pathname)
-const producthandle = pathname.replace("/product/", "")
-
-import '@shopify/buy-button-js'
-
-const client = ShopifyBuy.buildClient({
-  domain: "geohmetry.myshopify.com",
-  storefrontAccessToken: "d3fc2080bc04457f190bca2613352886",
-})
-const ui = ShopifyBuy.UI.init(client)
-ui.createComponent('product', {
-  handle: producthandle,
-  node: document.getElementById('my-product')      
-});
-
-
 </script>
