@@ -1,7 +1,7 @@
 module.exports = {
-  siteName: 'Neutral Gear',
-  siteDescription: 'Gender Neutral Apparel',
-  siteUrl: 'https://neutralgear.shop',
+  siteName: 'Stikker Shock',
+  siteDescription: 'Nail Stickers for pretty nails.',
+  siteUrl: 'https://stikkershock.com',
   plugins: [
     {
       use: 'gridsome-source-shopify',
