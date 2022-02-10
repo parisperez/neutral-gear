@@ -15,7 +15,7 @@
     "bootstrap-vue": "^2.0.4",
     "gridsome": "^0.7.9",
     "gridsome-source-shopify": "^0.1.9",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "7.2.0"
   }
 }
